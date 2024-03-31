@@ -1,0 +1,285 @@
+.load-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.load-background {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  mix-blend-mode: difference;
+  border-radius: 25px;
+  backdrop-filter: blur(23.60px);
+  background-color: transparent !important;
+}
+
+.load-inner-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: loading-rotate 3s linear forwards infinite;
+  transform: scale(0.7);
+
+}
+
+.load-shapes-container {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  /* padding-right: 50% !important; */
+  top: 0;
+  position: absolute;
+}
+
+.load-shape {
+  width: 120px;
+  height: 120px;
+  left: 41%;
+  top: 70%;
+  position: relative;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+margin: 0;
+}
+
+.load-shape > div {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  border: 4px white solid;
+  border-bottom-left-radius:30% ;
+  transition: animation 3s;
+
+
+}
+
+.load-shape > .shape1 {
+  left: -20px;
+  top: 110px;
+  background: #5A50CE;
+  animation: shrink1 3s linear alternate infinite;
+
+}
+@keyframes shrink1 {
+  0% , 20%{
+    left:-12px;
+    top: 97px;
+  }
+
+    40% ,60%  {
+  left: -20px;
+  top: 110px;
+  }
+
+   80% , 100% {
+    left:-12px;
+    top: 97px;
+  }
+
+}
+
+.load-shape > .shape2 {
+  left: 234px;
+  top: 85px;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
+  background: #32CD32;
+  animation: shrink2 3s linear alternate infinite;
+  z-index: 8;
+}
+@keyframes shrink2 {
+  0% , 20%{
+    left:222px;
+    top: 98px;
+
+  }
+
+    40% ,60%  {
+left: 234px;
+top: 85px;
+  }
+
+   80% , 100% {
+    left:222px;
+    top: 98px;
+
+  }
+
+}
+
+.load-shape > .shape3 {
+  left: 117px;
+  top: 225px;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  background: #FFA500;
+  animation: shrink3 3s linear alternate infinite;
+  z-index: 11;
+  overflow: inherit;
+}
+@keyframes shrink3   {
+  0% , 20%{
+    left: 104px;
+    top: 215px;
+  }
+
+    40% ,60%  {
+      left: 117px;
+      top: 225px;
+    }
+
+   80% , 100% {
+    left: 104px;
+    top: 215px;
+  }
+
+}
+
+
+.load-shape > .shape4 {
+  left: 94px;
+  top: -30px;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+  background: #FFD700;
+  z-index: 6;
+  animation: shrink4 3s linear alternate infinite;
+}
+
+@keyframes shrink4 {
+  0% , 20%{
+    left: 106px;
+    top:-20px;
+  }
+
+    40% ,60%  {
+      left: 94px;
+      top:-30px;
+    }
+
+   80% , 100% {
+    left: 106px;
+    top:-20px;
+  }
+
+}
+
+.load-shape > div:nth-child(n) > span:nth-child(n) {
+
+position: absolute;
+width: 2rem;
+height: 2rem;
+border-radius: 100%;
+}
+
+/* .load-shape > .shape1 > span:nth-child(1) {
+border: white 4px solid;
+  background-color: transparent;
+  top: 2.5rem;
+  left: 5.5rem;
+  } */
+  @keyframes loading-rotate {
+    0% {
+      transform: scale(0.5) rotate(0);
+    }
+
+    20% {
+      transform: scale(0.5) rotate(72deg);
+    }
+
+    40% {
+      transform: scale(0.7) rotate(144deg);
+    }
+
+    60% {
+      transform: scale(0.7) rotate(216deg);
+    }
+
+    80% {
+      transform: scale(0.5) rotate(288deg);
+    }
+
+    100% {
+      transform: scale(0.5) rotate(360deg);
+    }
+  }
+
+  .shape1 > .icon1 {
+    border-right: white 4px solid;
+    border-top: white 4px solid;
+    background-color: #5A50CE;
+    top: 38%;
+    left: 92%;
+    z-index: 12;
+transform: rotate(44deg);
+  }
+  .shape1 > .icon2 {
+    border-right: white 3px solid;
+    border-top: white 3px solid;
+    background-color: #584DE2;
+    top: 0%;
+    left: 35%;
+    z-index: 4;
+    transform: rotate(140deg)  scale(2);
+  }
+  .shape4 > .icon1 {
+    border-right: white 4px solid;
+    border-top: white 4px solid;
+    background-color: #FFD700;
+    top: 33%;
+    left: 92%;
+    z-index: 10;
+transform: rotate(44deg);
+  }
+  .shape4 > .icon2 {
+    border-right: white 3px solid;
+    border-top: white 3px solid;
+    background-color: #584DE2;
+    width: 10%;
+    top: -0%;
+    left: 35%;
+    z-index: 7;
+    transform: rotate(140deg)  scale(2);
+  }
+  .shape2 > .icon1 {
+    border-right: white 4px solid;
+    border-top: white 4px solid;
+    background-color: #32CD32;
+    top: 33%;
+    left: 92%;
+    z-index: 18;
+transform: rotate(44deg);
+  }
+  .shape2 > .icon2 {
+    border-right: white 3px solid;
+    border-top: white 3px solid;
+    background-color: #584DE2;
+    width: 10%;
+    top: -0%;
+    left: 35%;
+    z-index: 8;
+    transform: rotate(140deg)  scale(2);
+  }
+  .shape3 > .icon1 {
+    border-right: white 4px solid;
+    border-top: white 4px solid;
+    background-color: #FFA500;
+    top: 33%;
+    left: 92%;
+    z-index: 18;
+transform: rotate(44deg);
+  }
+  .shape3 > .icon2 {
+    border-right: white 3px solid;
+    border-top: white 3px solid;
+    background-color: #584DE2;
+    width: 10%;
+    top: -0%;
+    left: 31%;
+    z-index: 8;
+    transform: rotate(140deg)  scale(2);
+  }
